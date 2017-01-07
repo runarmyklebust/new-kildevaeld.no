@@ -1,0 +1,22 @@
+<article class="article-show">
+
+    <div class="row">
+        <h1 class="article-title" data-th-text="${title}">Article title</h1>
+
+        <p class="article-preface" data-th-text="${preface}" data-th-if="${preface}">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, quod homines infima fortuna, nulla spe rerum gerendarum, opifices
+            denique delectantur historia?
+        </p>
+
+        <div class="article-body" data-th-utext="${bodyText}" data-th-if="${bodyText}">
+        </div>
+    </div>
+    <div class="row">
+        <div data-th-each="image : ${articleImages}" class="col-md-6">
+            <img data-th-if="${image}" class="img-responsive img-rounded" src=""
+                 data-th-src="${portal.imageUrl({'_id=' + image, '_scale=block(640, 480)', '_format=jpeg', '_quality=85'})}"
+                 alt=""/>
+        </div>
+    </div>
+
+</article>

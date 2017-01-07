@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content-type>
+  <display-name>Kurs</display-name>
+  <content-display-name-script>$('title')</content-display-name-script>
+  <super-type>base:structured</super-type>
+  <form>
+    <field-set name="course-info">
+      <label>Kurs</label>
+      <items>
+        <input type="TextLine" name="title">
+          <label>Title</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="DateTime" name="startup">
+          <label>Oppstart</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="TextArea" name="preface">
+          <label>Preface</label>
+          <occurrences minimum="1" maximum="1"/>
+        </input>
+        <input type="HtmlArea" name="description">
+          <label>Description</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+        <input type="HtmlArea" name="bodyText">
+          <label>Body text</label>
+          <occurrences minimum="0" maximum="1"/>
+        </input>
+      </items>
+    </field-set>
+  </form>
+</content-type>

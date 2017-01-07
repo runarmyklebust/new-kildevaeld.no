@@ -1,0 +1,42 @@
+<div>
+
+    <h3>Nyheter</h3>
+
+    <div data-th-each="article : ${articles}" class="article-list-item">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 data-th-text="${article.title}">Article title</h2>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <a href="#" data-th-href="${portal.pageUrl({'_id=' + article._id})}">
+                            <img data-th-if="${article.listImage}" class="media-object img-rounded" src=""
+                                 data-th-src="${portal.imageUrl({'_id=' + article.listImage, '_scale=block(150, 150)', '_format=jpeg', '_quality=85'})}"
+                                 alt=""/>
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p class="article-preface" data-th-text="${article.preface}" data-th-if="${article.preface}">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, quod homines infima fortuna, nulla spe rerum
+                            gerendarum,
+                            opifices denique delectantur historia?
+                        </p>
+                        <p class="article-preface" data-th-utext="${article.description}" data-th-if="${article.description}">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid, quod homines infima fortuna, nulla spe rerum
+                            gerendarum,
+                            opifices denique delectantur historia?
+                        </p>
+                        <div class="article-link">
+                            > <a href="" data-th-href="${portal.pageUrl({'_id=' + article._id})}">Les mer her</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

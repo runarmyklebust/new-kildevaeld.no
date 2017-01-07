@@ -1,0 +1,14 @@
+<article class="article-show">
+
+    <img data-th-if="${image}" class="course-image" src=""
+         data-th-src="${portal.imageUrl({'_id=' + image, '_scale=block(1200, 250)', '_format=jpeg', '_quality=85'})}" alt=""/>
+
+    <h1 class="course-title" data-th-text="${title}">Article title</h1>
+
+    <p class="course-preface" data-th-text="${preface}" data-th-if="${preface}"></p>
+
+    <div class="course-body" data-th-utext="${description}" data-th-if="${description}"></div>
+
+    <div class="course-body" data-th-utext="${bodyText}" data-th-if="${bodyText}"></div>
+
+</article>
