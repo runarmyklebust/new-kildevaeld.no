@@ -13,8 +13,6 @@ function handleGet(req) {
     var model = {};
     model.articles = getArticles();
 
-    log.info("Model: %s", model);
-
     return {
         body: libs.thymeleaf.render(view, model)
     };
@@ -24,7 +22,7 @@ function getArticles() {
 
     var site = libs.portal.getSite();
 
-    var currentContent = site._path + "/nyheter";
+    var currentContent = site._path + "/aktuelt";
 
     // This will get the article contents published as children of current content
     var result = libs.content.getChildren({

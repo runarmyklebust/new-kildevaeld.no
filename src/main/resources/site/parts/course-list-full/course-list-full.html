@@ -1,0 +1,13 @@
+<div>
+
+    <div class="panel" data-th-each="course : ${courses}">
+        <div class="panel-heading course-list-heading">
+            <h4 data-th-text="${course.title}" data-th-if="${course.title}">Article title</h4>
+        </div>
+        <div class="panel-body bg-default">
+            <div class="article-body" data-th-utext="${course.description}" data-th-if="${course.description}"></div>
+            <div class="article-body" data-th-utext="${course.bodyText}" data-th-if="${course.bodyText}"></div>
+        </div>
+    </div>
+
+</div>

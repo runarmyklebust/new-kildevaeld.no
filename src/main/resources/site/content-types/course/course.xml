@@ -11,7 +11,7 @@
           <label>Title</label>
           <occurrences minimum="1" maximum="1"/>
         </input>
-        <input type="DateTime" name="startup">
+        <input type="Date" name="startup">
           <label>Oppstart</label>
           <occurrences minimum="1" maximum="1"/>
         </input>

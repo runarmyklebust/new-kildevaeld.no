@@ -17,12 +17,15 @@ function handleGet(req) {
 
         model.title = result.data.title;
         model.preface = result.data.preface;
+        model.description = libs.portal.processHtml({
+            value: result.data.description
+        })
         model.bodyText = libs.portal.processHtml({
             value: result.data.bodyText
         });
         model.listImage = result.data.listImage;
         model.articleImages = result.data.articleImages;
-        
+
         return model;
     }
 

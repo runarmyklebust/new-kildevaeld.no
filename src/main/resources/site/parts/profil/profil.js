@@ -20,7 +20,7 @@ function handleGet(req) {
         model.bodyText = libs.portal.processHtml({
             value: result.data.bodyText
         });
-        model.image = result.data.image;
+        model.image = result.data.listImage;
 
         return model;
     }
